@@ -1,66 +1,202 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 20px;
+h1 {
+    color: navy;
 }
 
-.container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 1000px;
-}
-
-h2 { 
-  text-align: left; 
-  color: #333; 
-}
-
-.input-group { 
-  display: flex; 
-  gap: 5px; 
-}
-
-input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+p {
+    font-size: 20px;
 }
 
 button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
+    background-color: lightblue;
+    padding: 5px; /*semua sisi besarnya 5px*/
+    border: none; /*ngilangin garis tepi*/
+    border-radius: 5px; /*ngasi lengkungan di sudut*/
     cursor: pointer;
-    border-radius: 4px;
 }
 
-ul { 
-  list-style: none; 
-  padding: 0; 
-  margin-top: 20px; 
+/* ========== 2. SELECTOR CLASS ========== */
+
+.judul-utama {
+    color: darkorange;
+    text-transform: uppercase;
 }
 
-li {
-    background: #eee;
-    margin-bottom: 5px;
+.text-miring {
+    font-style: italic;
+    color: gray;
+}
+
+.kotak-merah {
+    background-color: #ffcccc;
+    padding: 8px;
+    border-left: 5px solid red;
+    width: 100px; /*ngatur panjang horizontal*/
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/* ========== 3. SELECTOR ID ========== */
+
+#header {
+    background-color: gray;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 24px;
+    width: 300px;
+}
+
+#pesan-spesial { /* background putih karena default tanpa bg colour begitu */
+    border: 2px solid green;
     padding: 10px;
+    color: green;
+    font-weight: bold;
+    width: 240px;
+}
+
+/* ========== 4. GABUNGAN CLASS & TAG ========== */
+
+p.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    width: 300px;
+}
+
+div.highlight {
+    background-color: lightgreen;
+    padding: 10px;
+    width: 240px;
+}
+
+/* ========== 6. FONT & TEXT-ALIGN ========== */
+.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+.font-times {
+    font-family: "Times New Roman", serif;
+}
+
+.teks-tebal {
+    font-weight: bold;
+}
+
+.teks-miring {
+    font-style: italic;
+}
+
+.rata-kanan {
+    text-align: right;
+}
+
+.rata-tengah {
+    text-align: center;
+}
+
+.rata-kiri {
+    text-align: left;
+}
+
+/* ========== 7. WIDTH & HEIGHT ========== */
+.kotak-1 {
+    background-color: #e0e0e0;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.kotak-2 {
+    background-color: #c0c0c0;
+    width: 50%;          /* 50% dari lebar layar */
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.kotak-3 {
+    background-color: #a0a0a0;
+    width: auto;
+    height: auto;        /* tinggi menyesuaikan isi */
+    padding: 10px;
+}
+
+/* ========== RESET DASAR ========== */
+body {
+    
+    background-color: #f5f5f5;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+/* ========== 1. MARGIN, PADDING, BORDER ========== */
+.box-model-1 {
+    background-color: #e3f2fd;
+    margin: 20px;              /* jarak luar semua sisi 20px */
+    padding: 10px;             /* jarak dalam semua sisi 10px */
+    border: 2px solid #2196f3; /* border tebal 2px, warna biru */
+    box-sizing: border-box;
+    max-width: 400px; 
+}
+
+.box-model-2 {
+    background-color: #fff3e0;
+    margin-top: 10px;          /* atas 10px */
+    margin-right: 50px;        /* kanan 50px */
+    margin-bottom: 30px;       /* bawah 30px */
+    margin-left: 20px;         /* kiri 20px */
+    padding: 15px;
+    border: 3px dashed #ff9800; /* border dashed putus-putus */
+}
+
+.box-model-3 {
+    background-color: #e8f5e8;
+    margin: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: 5px solid #4c944e;
+}
+
+/* ========== 2. BORDER-RADIUS ========== */
+.radius-1 {
+    background-color: #9c27b0;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;       /* semua sudut 10px */
+}
+
+.radius-2 {
+    background-color: #673ab7;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 20px;       /* lebih bulat */
+}
+
+.radius-3 {
+    background-color: #3f51b5;
+    color: white;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 50%;        /* jadi lingkaran */
+    text-align: center;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
 }
 
-.hapus-btn {
-    background: #dc3545;
+.radius-4 {
+    background-color: #009688;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
+    padding: 15px;
+    margin: 10px 0;
+    border-top-left-radius: 20px;      /* kiri atas */
+    border-bottom-right-radius: 20px;   /* kanan bawah */
 }
+
