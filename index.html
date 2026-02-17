@@ -1,23 +1,138 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>To-Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan CSS #1</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- 1. SELECTOR TAG -->
+    <h1>Ini pakai selector tag (h1) yang diwarnai biru</h1>
+    <p>Ini pakai selector tag (p) yang memiliki font-size 20px</p>
+    <button>Tombol (tag button)</button>
 
-    <div class="container">
-        <h2>Daftar Tugas Hari Ini</h2>
-        
-        <div class="input-group">
-            <input type="text" id="todo-input" placeholder="Tulis tugas baru...">
-            <button onclick="tambahTugas()">Tambah</button>
+    <!-- 2. SELECTOR CLASS -->
+    <h2 class="judul-utama">Ini pakai selector class (.judul-utama)</h2>
+    <p class="text-miring">Ini pakai class .text-miring</p>
+    <div class="kotak-merah">Kotak dengan class .kotak-merah</div>
+
+    <!-- 3. SELECTOR ID -->
+    <div id="header">Ini pakai selector id (#header)</div>
+    <p id="pesan-spesial">Ini pakai id #pesan-spesial</p>
+
+    <!-- 4. GABUNGAN CLASS & TAG -->
+    <p class="highlight">Ini pakai class .highlight di tag p</p>
+    <div class="highlight">Ini pakai class .highlight di tag div</div>
+
+    <!-- 6. FONT & TEXT-ALIGN -->
+    <p class="font-arial">Ini pakai font Arial</p>
+    <p class="font-times">Ini pakai font Times New Roman</p>
+    <p class="teks-tebal">Ini teks tebal (bold)</p>
+    <p class="teks-miring">Ini teks miring (italic)</p>
+    <p class="rata-kanan">Ini rata kanan</p>
+    <p class="rata-tengah">Ini rata tengah</p>
+    <p class="rata-kiri">Ini rata kiri (default)</p>
+
+    <!-- 7. WIDTH & HEIGHT -->
+    <div class="kotak-1">Lebar 200px, Tinggi 100px</div>
+    <div class="kotak-2">Lebar 50%, Tinggi 150px</div>
+    <div class="kotak-3">Lebar auto (mengikuti teks), Tinggi auto (mengikuti teks)</div>
+
+    
+
+    <h1>Belajar Box Model & Form Styling</h1>
+
+    <!-- 1. CONTOH MARGIN, PADDING, BORDER -->
+    <h2>1. Margin, Padding, Border</h2>
+    
+    <div class="box-model-1">Box 1: Margin luar 20px, padding dalam 10px</div>
+    <div class="box-model-2">Box 2: Margin berbeda tiap sisi, border dashed</div>
+    <div class="box-model-3">Box 3: Padding berbeda tiap sisi, border tebal</div>
+
+    <!-- 2. CONTOH BORDER-RADIUS -->
+    <h2>2. Border-radius (Sudut Melengkung)</h2>
+    
+    <div class="radius-1">Radius 10px (semua sudut)</div>
+    <div class="radius-2">Radius 20px (lebih bulat)</div>
+    <div class="radius-3">Radius 50% (jadi lingkaran)</div>
+    <div class="radius-4">Radius kiri atas 20px, kanan bawah 20px</div>
+
+    <!-- 3. CONTOH DISPLAY (BLOCK, INLINE-BLOCK) -->
+    <h2>3. Display: block vs inline-block</h2>
+    
+    <h3>Display: block (default untuk div, p, h1)</h3>
+    <div class="block-demo">Block 1 (lebar penuh)</div>
+    <div class="block-demo">Block 2 (turun ke bawah)</div>
+    
+    <h3>Display: inline-block (bisa diatur lebar & sejajar)</h3>
+    <div class="inline-block-demo">Inline 1</div>
+    <div class="inline-block-demo">Inline 2</div>
+    <div class="inline-block-demo">Inline 3</div>
+
+    <!-- 4. FORM STYLING LENGKAP -->
+    <h2>4. Form Styling</h2>
+    
+    <form class="form-custom">
+        <!-- Text input -->
+        <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" class="form-control" placeholder="Masukkan nama lengkap">
         </div>
-
-        <ul id="todo-list"></ul>
-    </div>
-
-    <script src="index.js"></script>
+        
+        <!-- Email input -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" placeholder="contoh@email.com">
+        </div>
+        
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="form-control" placeholder="Minimal 6 karakter">
+        </div>
+        
+        <!-- Select dropdown -->
+        <div class="form-group">
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" class="form-control">
+                <option value="">-- Pilih Kategori --</option>
+                <option value="makanan">Makanan</option>
+                <option value="minuman">Minuman</option>
+                <option value="elektronik">Elektronik</option>
+            </select>
+        </div>
+        
+        <!-- Textarea -->
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" class="form-control" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+        </div>
+        
+        <!-- Radio button -->
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="L"> Laki-laki</label>
+                <label><input type="radio" name="gender" value="P"> Perempuan</label>
+            </div>
+        </div>
+        
+        <!-- Checkbox -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="setuju"> Saya setuju dengan syarat & ketentuan
+            </label>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Simpan Data</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="button" class="btn btn-success">Tombol Lain</button>
+        </div>
+    </form>
 </body>
+
 </html>
